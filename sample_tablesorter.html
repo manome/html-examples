@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Title -->
+        <title>Sample Tablesorter</title>
+
+        <!-- Bootstrap JS -->
+        <script src="libs/jquery/jquery-3.3.1.js"></script>
+        <script src="libs/popper/popper.min.js"></script>
+        <script src="libs/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="libs/bootstrap/4.3.1/css/bootstrap.css">
+
+        <!-- Tablesorter JS -->
+        <script src="libs/jquery/tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
+        <script src="libs/jquery/tablesorter/2.31.0/js/jquery.metadata.min.js"></script>
+
+        <!-- Optional JavaScript -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fav-table').tablesorter();
+            });
+        </script>
+
+        <!-- Optional CSS -->
+        <style type="text/css">
+            .tablesorter th{
+                position: relative;
+                cursor: pointer;
+                text-align: left;
+            }
+            .tablesorter th::before, .tablesorter th::after{
+                content: '';
+                position: absolute;
+                z-index: 2;
+                right: 7px;
+                width: 0;
+                height: 0;
+                border: 4px dashed;
+                border-color: #333 transparent;
+                pointer-events: none;
+            }
+            .tablesorter th::before{
+                border-bottom-style: solid;
+                border-top: none;
+                top: 40%;
+            }
+            .tablesorter th::after{
+                border-top-style: solid;
+                border-bottom: none;
+                bottom: 40%;
+            }
+            .tablesorter th.tablesorter-headerAsc:after{
+                border: none;
+            }
+            .tablesorter th.tablesorter-headerAsc:before{
+                top: 50%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+            }
+            .tablesorter th.tablesorter-headerDesc:before{
+                border: none;
+            }
+            .tablesorter th.tablesorter-headerDesc:after{
+                top: 50%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+            }
+            .tablesorter th.sorter-false:before, .tablesorter th.sorter-false:after{
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="fav-table" class="table table-striped">
+                <thead><tr><th>Name</th><th>Score</th></tr></thead>
+                <tr><td>Sato</td><td>1871000</td></tr>
+                <tr><td>Suzuki</td><td>1797000</td></tr>
+                <tr><td>Takahashi</td><td>1411000</td></tr>
+                <tr><td>Tanaka</td><td>1335000</td></tr>
+                <tr><td>Ito</td><td>1074000</td></tr>
+        </table>
+    </body>
+</html>

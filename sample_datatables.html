@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Title -->
+        <title>Sample Datatables</title>
+
+        <!-- Bootstrap JS -->
+        <script src="libs/jquery/jquery-3.3.1.js"></script>
+        <script src="libs/popper/popper.min.js"></script>
+        <script src="libs/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="libs/bootstrap/4.3.1/css/bootstrap.css">
+
+        <!-- Datatables JS -->
+        <script src="libs/jquery/datatables/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="libs/jquery/datatables/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Datatables CSS -->
+        <link rel="stylesheet" href="libs/jquery/datatables/1.10.20/css/dataTables.bootstrap4.min.svg.css">
+
+        <!-- Optional JavaScript -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fav-table').DataTable({
+                    language:{
+                        "decimal": ".",
+                        "thousands": ",",
+                        "infoFiltered": "",
+                        "sProcessing": "処理中...",
+                        "sLengthMenu": "_MENU_ 件表示",
+                        "sZeroRecords": "検索結果が見つかりません。",
+                        "sInfo": "全 _TOTAL_ 件中 _START_ から _END_ まで表示",
+                        "sInfoEmpty": "全 0 件中 0 から 0 まで表示",
+                        "sInfoPostFix": "",
+                        "sSearch": "検索 ",
+                        "sUrl": "",
+                        "oPaginate": {
+                            "sFirst": "先頭へ",
+                            "sPrevious": "前へ",
+                            "sNext": "次へ",
+                            "sLast": "最終へ"
+                        }
+                    },
+                    "paging": "true",
+                    "pageLength": 5,
+                    "lengthMenu": [[5, 10, 25, 50, 100], [5, 10, 25, 50, 100]],
+                    "order": [[0, "asc" ]] ,
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <table id="fav-table" class="table table-striped">
+                <thead><tr><th>Name</th><th>Score</th></tr></thead>
+                <tr><td>Sato</td><td>1871000</td></tr>
+                <tr><td>Suzuki</td><td>1797000</td></tr>
+                <tr><td>Takahashi</td><td>1411000</td></tr>
+                <tr><td>Tanaka</td><td>1335000</td></tr>
+                <tr><td>Ito</td><td>1074000</td></tr>
+                <tr><td>Watanabe</td><td>1063000</td></tr>
+                <tr><td>Yamamoto</td><td>1050000</td></tr>
+                <tr><td>Nakamura</td><td>1044000</td></tr>
+                <tr><td>Kobayashi</td><td>1028000</td></tr>
+                <tr><td>Kato</td><td>887000</td></tr>
+                <tr><td>Yoshida</td><td>829000</td></tr>
+                <tr><td>Yamada</td><td>814000</td></tr>
+                <tr><td>Sasaki</td><td>673000</td></tr>
+                <tr><td>Yamaguchi</td><td>643000</td></tr>
+                <tr><td>Matshimoto</td><td>627000</td></tr>
+        </table>
+    </body>
+</html>
