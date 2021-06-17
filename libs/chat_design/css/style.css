@@ -1,17 +1,8 @@
 .msger-chat {
-    height: 350px;
+    height: 500px;
     flex: 1;
     overflow-y: scroll;
     padding: 10px;
-}
-.msger-chat::-webkit-scrollbar {
-    width: 6px;
-}
-.msger-chat::-webkit-scrollbar-track {
-    background: #ddd;
-}
-.msger-chat::-webkit-scrollbar-thumb {
-    background: #bdbdbd;
 }
 .msg {
     display: flex;
@@ -50,8 +41,6 @@
 .msg-info-time {
     font-size: 0.85em;
 }
-
-
 .left-msg .msg-bubble {
     background: #ececec;
     border-bottom-left-radius: 0;
@@ -67,8 +56,6 @@
 .right-msg .msg-img {
     margin: 0 0 0 10px;
 }
-
-
 .msger-inputarea {
     display: flex;
     padding: 10px;
